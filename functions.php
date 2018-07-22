@@ -42,9 +42,10 @@ if ( ! function_exists( 'bubble_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		// This theme uses wp_nav_menu() in one location, add menu to Manage Location in WP admin > Apperance > Menus
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'bubble' ),
+			'footer-menu' => esc_html__( 'Footer', 'bubble' ),
 		) );
 
 		/*
@@ -174,3 +175,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+// Register Custom Navigation Walker
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';

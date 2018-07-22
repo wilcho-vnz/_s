@@ -24,7 +24,7 @@
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bubble' ), 'bubble', '<a href="https://automattic.com/">Automattic</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bubble' ), 'bubble', '<a href="https://wilch.io/">Wilhelm</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

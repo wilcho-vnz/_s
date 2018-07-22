@@ -120,11 +120,20 @@ add_action( 'widgets_init', 'bubble_widgets_init' );
  * Enqueue scripts and styles.
  */
 function bubble_scripts() {
-	wp_enqueue_style( 'bubble-style', get_stylesheet_uri() );
+	// Enqueue the main Stylesheet.
+	$buble = wp_get_theme();
+	// wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/dist/assets/css/style.69d3e8278ea4a8c0d554.css', array(), $buble->get( 'Version' ), 'all' );
+	wp_enqueue_style( 'main-stylesheet', 'http://localhost:3000/assets/css/style.css', array(), $buble->get( 'Version' ), 'all' );
 
-	wp_enqueue_script( 'bubble-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	// Deregister the jquery version bundled with WordPress.
+	wp_deregister_script( 'jquery' );
 
-	wp_enqueue_script( 'bubble-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	// Deregister the jquery-migrate version bundled with WordPress.
+	// wp_deregister_script( 'jquery-migrate' );
+
+	// Enqueue Buble scripts
+	// wp_enqueue_style( 'bundle-js', get_template_directory_uri() . '/dist/assets/js/bundle.69d3e8278ea4a8c0d554.js', array(), $buble->get( 'Version' ), 'all' );
+	wp_enqueue_script( 'bundle-js', 'http://localhost:3000/assets/js/bundle.js', array(), $buble->get( 'Version' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

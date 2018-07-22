@@ -1,6 +1,5 @@
 .babelrc
 .env
-dist/assets/
 src/
 node_modules/
 npm-debug.log*

@@ -30,7 +30,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bubble' ); ?></a>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="container site-header">
 		<nav class="navbar navbar-expand-lg navbar-light bg-white">
 			<a class="navbar-brand" href="<?php bloginfo('url') ?>" rel="home">
 				<div class="site-branding">
@@ -68,4 +68,4 @@
 
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="container site-content">

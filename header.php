@@ -11,7 +11,7 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?> >
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,13 +19,6 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 </head>
-
-
-
-
-
-
-
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bubble' ); ?></a>
@@ -46,26 +39,18 @@
 			<button id="navbar-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
-					'container'       => 'div',
-					'container_class' => 'collapse navbar-collapse',
-					'container_id'    => 'bs-example-navbar-collapse-1',
-					'menu_class'      => 'navbar-nav',
-					'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-					'walker'          => new WP_Bootstrap_Navwalker(),
-				) );
-				
-				?>
-			</div>
+			<?php
+			wp_nav_menu( array(
+				'theme_location' => 'main-menu',
+				'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
+				'container'       => 'div',
+				'container_class' => 'collapse navbar-collapse',
+				'container_id'    => 'navbarNavDropdown',
+				'menu_class'      => 'navbar-nav mr-auto',
+				'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+				'walker'          => new WP_Bootstrap_Navwalker(),
+			) );
+			?>
 		</nav>
-
-
-
-
 	</header><!-- #masthead -->
-
 	<div id="content" class="container site-content">

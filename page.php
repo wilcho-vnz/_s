@@ -14,9 +14,10 @@
 
 get_header();
 ?>
-	<div class="row">
-		<div class="col-12 col-md-8">
-			<div id="primary" class="content-area">
+	<div id="primary" class="content-area">
+		<div class="row">
+			<div class="col-12 col-md-8">
+
 				<main id="main" class="site-main">
 
 				<?php
@@ -34,12 +35,13 @@ get_header();
 				?>
 
 				</main><!-- #main -->
-			</div><!-- #primary -->
-		</div><!-- #col -->
+			</div><!-- #col -->
+			<div class="col-12 col-md-4">
 
-		<div class="col-12 col-md-4">
-			<?php get_sidebar(); ?>
-		</div><!-- #col -->
-	</div><!-- #row -->
+				<?php get_sidebar(); ?>
+
+			</div><!-- #col -->
+		</div><!-- #row -->
+	</div><!-- #primary -->
 <?php
 get_footer();

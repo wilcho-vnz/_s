@@ -44,7 +44,7 @@ if ( ! function_exists( 'bubble_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location, add menu to Manage Location in WP admin > Apperance > Menus
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'bubble' ),
+			'main-menu' => esc_html__( 'Primary', 'bubble' ),
 			'footer-menu' => esc_html__( 'Footer', 'bubble' ),
 		) );
 

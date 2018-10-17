@@ -176,5 +176,12 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
+/**
+ * Load Polylang compatibility file.
+ */
+if ( class_exists( 'PolyLang' ) ) {
+	require get_template_directory() . '/inc/polylang.php';
+}
+
 // Register Custom Navigation Walker
 require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';

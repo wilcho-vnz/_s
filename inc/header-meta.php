@@ -1,4 +1,5 @@
-    <meta property="og:image" content="<?php bloginfo('template_directory'); ?>/dist/static/share-img.png">
+	<meta property="property=og:description" content="<?php bloginfo('description') ?>">
+	<meta property="og:image" content="<?php bloginfo('template_directory'); ?>/dist/static/share-img.png">
 	<meta property="og:image:height" content="315">
 	<meta property="og:image:width" content="600">
 	<meta property="og:title" content="<?php bloginfo('description') ?>">
@@ -10,4 +11,5 @@
 	<meta name="twitter:description" content="<?php bloginfo('description') ?>" />
 	<meta name="twitter:image" content="<?php bloginfo('template_directory'); ?>/dist/static/img/share-img.png" />
 	<meta name="twitter:site" content="<?php bloginfo('name') ?>" />
+	<?php // Useful link to generete favicons https://realfavicongenerator.net/ ?>
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/dist/static/img/favicon.ico" type="image/x-icon" />
